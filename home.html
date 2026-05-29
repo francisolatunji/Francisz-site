@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <a class="active" href="home.html" data-home-trigger>Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="personal.html">Personal</a>
+  </nav>
+
+  <h1 class="typing-target" data-type-text="Home"></h1>
+  <p class="typing-target" data-type-text="This is the home page."></p>
+
+  <script>
+    (function () {
+      const trigger = document.querySelector('[data-home-trigger]');
+      const heading = document.querySelector('h1[data-type-text]');
+      const paragraph = document.querySelector('p[data-type-text]');
+      const typingDuration = 90000;
+      let animationRunning = false;
+
+      function typeText(element, text, duration) {
+        return new Promise((resolve) => {
+          element.classList.add('is-visible');
+          element.textContent = '';
+
+          const textNode = document.createTextNode('');
+          const caret = document.createElement('span');
+          caret.className = 'typing-caret';
+          element.appendChild(textNode);
+          element.appendChild(caret);
+
+          const startTime = performance.now();
+
+          function frame(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const charactersToShow = Math.max(1, Math.round(text.length * progress));
+            textNode.data = text.slice(0, charactersToShow);
+
+            if (progress < 1) {
+              requestAnimationFrame(frame);
+            } else {
+              caret.remove();
+              resolve();
+            }
+          }
+
+          requestAnimationFrame(frame);
+        });
+      }
+
+      async function startAnimation(event) {
+        if (event) {
+          event.preventDefault();
+        }
+
+        if (animationRunning) {
+          return;
+        }
+
+        animationRunning = true;
+        await typeText(heading, heading.dataset.typeText, typingDuration);
+        await typeText(paragraph, paragraph.dataset.typeText, 4000);
+      }
+
+      trigger.addEventListener('click', startAnimation);
+    }());
+  </script>
+</body>
+</html>
