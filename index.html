@@ -3,35 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Francis Olatunji | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
-  <header class="banner"></header>
-
   <nav class="site-nav" aria-label="Primary">
     <a class="active" href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="work.html">Work</a>
-    <a href="personal.html">Personal</a>
+    <a href="about.html">About Me</a>
+    <a href="ai.html">AI</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="assignments.html">Assignments</a>
+    <a href="hardware.html">Hardware</a>
   </nav>
-   
 
-<h1> Francis Olatunji portfolio </h1>
-<h2> aka Ironman</h2>
- 
-<p>This is going to be connected to hardware. This website was created using
-    HTML, CSS, and JavaScript. It is a simple website that will be used to display
-    interactions with hardware. 👌🏻
-  </p>
+  <main>
+    <section class="page-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Student • Software Developer • Hardware Enthusiast</span>
+        <h1>Francis Olatunji</h1>
+        <p>super webpage</p>
+        <p class="section-lead">A clean portfolio for school, software, and the hardware project that will eventually make the lights, buzzer, and ESP32 work together from the web.</p>
+        <div class="hero-actions">
+          <a class="button" href="assignments.html">View My Projects</a>
+          <a class="button-secondary" href="hardware.html">Open Hardware Dashboard</a>
+        </div>
+        <div class="hero-meta" aria-label="Quick status summary">
+          <div class="meta-chip"><span class="pulse"></span> ESP32 Status: Online</div>
+          <div class="meta-chip">LED System: Ready</div>
+          <div class="meta-chip">Buzzer: Ready</div>
+        </div>
+      </div>
 
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGhld3pybDc1ZXFsNHM4M2w2aWUyeTNqZjk2OXJ2b3lnN3o0OGh4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NDzVwpclOqiprMcfLZ/giphy.gif" width="400" height="300">
+      <div class="hero-visual">
+        <div class="avatar-card">
+          <div class="avatar" aria-hidden="true">FO</div>
+          <div class="avatar-copy">
+            <strong>Professional avatar</strong>
+            <p>Simple, polished, and ready to swap for a real photo later.</p>
+          </div>
+        </div>
 
+        <div class="status-card">
+          <h2>Hardware Status</h2>
+          <div class="status-grid">
+            <div class="status-row"><span>ESP32</span><span class="status-ok">Online</span></div>
+            <div class="status-row"><span>LED System</span><span class="status-ok">Ready</span></div>
+            <div class="status-row"><span>Buzzer</span><span class="status-ok">Ready</span></div>
+            <div class="status-row"><span>WiFi</span><span class="status-waiting">Waiting</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    
+    <section class="section">
+      <h2>What This Portfolio Shows</h2>
+      <p class="section-lead">The first version is built now, while the ESP32 connection comes later. That keeps the site complete before the hardware arrives.</p>
+      <div class="content-grid">
+        <article class="card">
+          <h3>School-ready pages</h3>
+          <p>About, AI, electronics, assignments, and hardware pages all live in one clean structure.</p>
+        </article>
+        <article class="card">
+          <h3>Live-looking dashboard</h3>
+          <p>A fake device dashboard now, so you can swap in real ESP32 data without redesigning the site.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

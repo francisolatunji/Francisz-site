@@ -1,0 +1,51 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="260" y1="120" x2="940" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="386" y1="180" x2="814" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 400) rotate(90) scale(320 480)">
+      <stop stop-color="#38BDF8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="#0B1220"/>
+  <circle cx="600" cy="400" r="420" fill="url(#glow)"/>
+  <rect x="240" y="150" width="720" height="500" rx="40" fill="url(#g1)" stroke="#334155" stroke-width="4"/>
+  <rect x="320" y="210" width="560" height="380" rx="28" fill="#111827" stroke="#475569" stroke-width="3"/>
+  <rect x="372" y="268" width="190" height="160" rx="22" fill="url(#g2)"/>
+  <rect x="392" y="290" width="150" height="24" rx="12" fill="#E0F2FE" fill-opacity="0.85"/>
+  <rect x="392" y="326" width="116" height="16" rx="8" fill="#BAE6FD" fill-opacity="0.8"/>
+  <rect x="392" y="352" width="140" height="16" rx="8" fill="#BAE6FD" fill-opacity="0.55"/>
+  <rect x="392" y="378" width="92" height="16" rx="8" fill="#BAE6FD" fill-opacity="0.45"/>
+  <circle cx="642" cy="320" r="24" fill="#22C55E"/>
+  <circle cx="706" cy="320" r="24" fill="#F59E0B"/>
+  <circle cx="770" cy="320" r="24" fill="#38BDF8"/>
+  <rect x="612" y="384" width="218" height="88" rx="18" fill="#0F172A" stroke="#475569" stroke-width="2"/>
+  <rect x="636" y="408" width="170" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.8"/>
+  <rect x="636" y="432" width="140" height="14" rx="7" fill="#94A3B8" fill-opacity="0.9"/>
+  <rect x="636" y="456" width="112" height="14" rx="7" fill="#94A3B8" fill-opacity="0.7"/>
+  <rect x="380" y="478" width="440" height="44" rx="22" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <path d="M360 250H840" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="10 12"/>
+  <path d="M360 550H840" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="10 12"/>
+  <rect x="286" y="246" width="26" height="308" rx="13" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+  <rect x="888" y="246" width="26" height="308" rx="13" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+  <circle cx="294" cy="286" r="9" fill="#38BDF8"/>
+  <circle cx="294" cy="340" r="9" fill="#22C55E"/>
+  <circle cx="294" cy="394" r="9" fill="#F59E0B"/>
+  <circle cx="294" cy="448" r="9" fill="#38BDF8"/>
+  <circle cx="294" cy="502" r="9" fill="#22C55E"/>
+  <circle cx="294" cy="556" r="9" fill="#F59E0B"/>
+  <circle cx="900" cy="286" r="9" fill="#38BDF8"/>
+  <circle cx="900" cy="340" r="9" fill="#22C55E"/>
+  <circle cx="900" cy="394" r="9" fill="#F59E0B"/>
+  <circle cx="900" cy="448" r="9" fill="#38BDF8"/>
+  <circle cx="900" cy="502" r="9" fill="#22C55E"/>
+  <circle cx="900" cy="556" r="9" fill="#F59E0B"/>
+  <text x="600" y="594" text-anchor="middle" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">ESP32 CONTROL BOARD</text>
+  <text x="600" y="638" text-anchor="middle" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="22">LEDs • Buzzer • OLED Display • WiFi</text>
+</svg>

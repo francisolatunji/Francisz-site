@@ -3,74 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Francis Olatunji | Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
-    <a class="active" href="home.html" data-home-trigger>Home</a>
-    <a href="about.html">About</a>
-    <a href="work.html">Work</a>
-    <a href="personal.html">Personal</a>
+    <a class="active" href="home.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="ai.html">AI</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="assignments.html">Assignments</a>
+    <a href="hardware.html">Hardware</a>
   </nav>
 
-  <h1 class="typing-target" data-type-text="Home"></h1>
-  <p class="typing-target" data-type-text="This is the home page."></p>
+  <main>
+    <section class="page-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Student Engineer • Software Developer • Hardware Enthusiast</span>
+        <h1>Francis Olatunji</h1>
+        <p class="section-lead">This is the landing page built my Francis Olatunji is designed to be intractive. So seat back relax and enjoy the show.</p>
+        <div class="hero-actions">
+          <a class="button" href="assignments.html">View My Projects</a>
+          <a class="button-secondary" href="about.html">Read About Me</a>
+        </div>
+        <div class="hero-meta" aria-label="Quick status summary">
+          <div class="meta-chip"><span class="pulse"></span> ESP32 Status: Online</div>
+          <div class="meta-chip">LED System: Ready</div>
+          <div class="meta-chip">Buzzer: Ready</div>
+        </div>
+      </div>
 
-  <script>
-    (function () {
-      const trigger = document.querySelector('[data-home-trigger]');
-      const heading = document.querySelector('h1[data-type-text]');
-      const paragraph = document.querySelector('p[data-type-text]');
-      const typingDuration = 90000;
-      let animationRunning = false;
+      <div class="hero-visual">
+        <div class="avatar-card">
+          <div class="avatar" aria-hidden="true">FO</div>
+          <div class="avatar-copy">
+            <strong>Professional avatar</strong>
+            <p>Use a real photo later if you want. The layout is ready for it.</p>
+          </div>
+        </div>
 
-      function typeText(element, text, duration) {
-        return new Promise((resolve) => {
-          element.classList.add('is-visible');
-          element.textContent = '';
+        <div class="status-card">
+          <h2>Hardware Status</h2>
+          <div class="status-grid">
+            <div class="status-row"><span>ESP32</span><span class="status-ok">Online</span></div>
+            <div class="status-row"><span>LED System</span><span class="status-ok">Ready</span></div>
+            <div class="status-row"><span>Buzzer</span><span class="status-ok">Ready</span></div>
+            <div class="status-row"><span>WiFi</span><span class="status-waiting">Waiting</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          const textNode = document.createTextNode('');
-          const caret = document.createElement('span');
-          caret.className = 'typing-caret';
-          element.appendChild(textNode);
-          element.appendChild(caret);
-
-          const startTime = performance.now();
-
-          function frame(now) {
-            const progress = Math.min((now - startTime) / duration, 1);
-            const charactersToShow = Math.max(1, Math.round(text.length * progress));
-            textNode.data = text.slice(0, charactersToShow);
-
-            if (progress < 1) {
-              requestAnimationFrame(frame);
-            } else {
-              caret.remove();
-              resolve();
-            }
-          }
-
-          requestAnimationFrame(frame);
-        });
-      }
-
-      async function startAnimation(event) {
-        if (event) {
-          event.preventDefault();
-        }
-
-        if (animationRunning) {
-          return;
-        }
-
-        animationRunning = true;
-        await typeText(heading, heading.dataset.typeText, typingDuration);
-        await typeText(paragraph, paragraph.dataset.typeText, 4000);
-      }
-
-      trigger.addEventListener('click', startAnimation);
-    }());
-  </script>
+    <section class="section">
+      <h2>What You’ll Find</h2>
+      <p class="section-lead">The rest of the portfolio is split into clear pages so each idea gets space instead of becoming one long wall of text.</p>
+      <div class="content-grid">
+        <article class="card">
+          <h3>About Me</h3>
+          <p>Personal info, biography, and semester schedule.</p>
+        </article>
+        <article class="card">
+          <h3>AI</h3>
+          <p>Why I like AI, the tools I’ve used, and what I want to build next.</p>
+        </article>
+        <article class="card">
+          <h3>Electronics</h3>
+          <p>The hardware image, components, and a simple wiring story.</p>
+        </article>
+        <article class="card">
+          <h3>Hardware</h3>
+          <p>A polished dashboard for the ESP32, LEDs, buzzer, and event log.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
