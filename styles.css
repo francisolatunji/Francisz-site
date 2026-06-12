@@ -37,7 +37,7 @@ h1 { font-size: 2rem; margin: 12px 0 6px; }
 .section-lead { color: var(--muted); margin: 0 0 12px; }
 
 .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-.button { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #fff; padding:10px 14px; border-radius:8px; border:none; display:inline-block; text-decoration:none; font-weight:700; }
+.button { background: var(--accent); color: #fff; padding:10px 14px; border-radius:8px; border:none; display:inline-block; text-decoration:none; font-weight:700; }
 .button-secondary { background: transparent; border: 1px solid #e6e9ef; padding:10px 14px; border-radius:8px; color: var(--muted); text-decoration:none; }
 
 /* Hero visual / avatar */
@@ -168,7 +168,7 @@ th { color: var(--muted); font-size:0.85rem; text-transform:uppercase; }
   border: 0;
   border-radius: 16px;
   min-height: 54px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(14, 165, 233, 0.08));
+  background: #e0f2fe;
   color: var(--text);
   font: inherit;
   font-weight: 700;

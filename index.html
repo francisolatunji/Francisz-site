@@ -36,7 +36,9 @@
 
       <div class="hero-visual">
         <div class="avatar-card">
-          <div class="avatar" aria-hidden="true"> <img src = IMG_2036.jpeg> </div>
+          <div class="avatar" aria-hidden="true">
+            <img src="images/francis-portrait.jpeg" alt="Portrait of Francis Olatunji">
+          </div>
           <div class="avatar-copy">
             <strong>Professional avatar</strong>
             <p>Simple, polished, and ready to swap for a real photo later.</p>
@@ -55,6 +57,19 @@
       </div>
     </section>
 
+    <section id="hardware-control" class="section">
+      <h2>ESP32 Hardware Control</h2>
+      <p class="section-lead">Control my ESP32 LEDs and buzzer from this portfolio website.</p>
+
+      <button onclick="sendCommand('led1')">Turn On LED 1</button>
+      <button onclick="sendCommand('led2')">Turn On LED 2</button>
+      <button onclick="sendCommand('led3')">Turn On LED 3</button>
+      <button onclick="sendCommand('buzzer')">Beep Buzzer</button>
+      <button onclick="sendCommand('off')">Turn Everything Off</button>
+
+      <p id="esp32-status">Status: not connected yet</p>
+    </section>
+
     <section class="section">
       <h2>What This Portfolio Shows</h2>
       <p class="section-lead">This porfolio shows and tells you things about me, shows you my personal interests and shows you my 4 artifacts in this class. </p>
@@ -70,8 +85,25 @@
       </div>
     </section>
   </main>
+
+  <script>
+    const esp32IP = "http://192.168.1.45";
+
+    function sendCommand(command) {
+      document.getElementById("esp32-status").textContent = "Sending command...";
+
+      fetch(`${esp32IP}/${command}`)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("esp32-status").textContent = "Status: " + data;
+        })
+        .catch(error => {
+          document.getElementById("esp32-status").textContent =
+            "Status: could not connect to ESP32";
+          console.error(error);
+        });
+    }
+  </script>
 </body>
 
 </html>
-
-<section class=""
