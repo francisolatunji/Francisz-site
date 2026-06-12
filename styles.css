@@ -57,6 +57,25 @@ h1 { font-size: 2rem; margin: 12px 0 6px; }
 .card { background: var(--panel); padding:16px; border-radius: 10px; box-shadow: 0 6px 12px rgba(15,23,42,0.03); }
 .card h3 { margin-top:0; margin-bottom:8px; }
 
+.schedule-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.schedule-slot {
+  background: var(--panel);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(15,23,42,0.03);
+  display: grid;
+  gap: 3px;
+  padding: 16px;
+}
+
+.schedule-slot strong {
+  color: var(--accent);
+}
+
 /* meta chips */
 .meta-chip { display:inline-block; padding:6px 10px; background:#f1f5f9; color:var(--muted); border-radius:999px; font-weight:600; }
 
@@ -206,13 +225,6 @@ th { color: var(--muted); font-size:0.85rem; text-transform:uppercase; }
   display: grid;
   gap: 16px;
 }
-
-.responsive{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 .fake-dashboard-card {
   padding: 22px;
