@@ -57,25 +57,6 @@ h1 { font-size: 2rem; margin: 12px 0 6px; }
 .card { background: var(--panel); padding:16px; border-radius: 10px; box-shadow: 0 6px 12px rgba(15,23,42,0.03); }
 .card h3 { margin-top:0; margin-bottom:8px; }
 
-.schedule-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.schedule-slot {
-  background: var(--panel);
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(15,23,42,0.03);
-  display: grid;
-  gap: 3px;
-  padding: 16px;
-}
-
-.schedule-slot strong {
-  color: var(--accent);
-}
-
 /* meta chips */
 .meta-chip { display:inline-block; padding:6px 10px; background:#f1f5f9; color:var(--muted); border-radius:999px; font-weight:600; }
 
@@ -99,8 +80,7 @@ th { color: var(--muted); font-size:0.85rem; text-transform:uppercase; }
   max-width: 68ch;
 }
 
-.section-card,
-.artifact-figure {
+.section-card {
   min-height: 100%;
 }
 
@@ -116,28 +96,6 @@ th { color: var(--muted); font-size:0.85rem; text-transform:uppercase; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.artifact-figure {
-  min-height: 180px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 18px;
-  background:
-    radial-gradient(circle at 50% 35%, rgba(56, 189, 248, 0.22), transparent 40%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.55));
-  border: 1px dashed rgba(56, 189, 248, 0.28);
-  color: #cbd5e1;
-  font-weight: 700;
-}
-
-.artifact-figure small {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-weight: 500;
 }
 
 .diagram {
