@@ -18,33 +18,54 @@
 
   <main>
     <section class="page-hero">
-      <div class="hero-copy">
-        <span class="eyebrow">Student Engineer • Software Developer • Hardware Enthusiast</span>
-        <h1>Francis Olatunji</h1>
-        <p class="section-lead">This is the landing page built my Francis Olatunji is designed to be intractive. So seat back relax and enjoy the show.</p>
-        <div class="hero-actions">
-          <a class="button" href="assignments.html">View My Projects</a>
-          <a class="button-secondary" href="about.html">Read About Me</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="avatar-card">
-         <img src="IMG_2036.jpeg" alt="Francis Olatunji portrait">
-        </div>
-
-        <div class="status-card">
-          <h2>Hardware Status</h2>
-          <div class="status-grid">
-            <div class="status-row"><span>ESP32</span><span class="status-ok">Online</span></div>
-            <div class="status-row"><span>LED System</span><span class="status-ok">Ready</span></div>
-            <div class="status-row"><span>Buzzer</span><span class="status-ok">Ready</span></div>
-            <div class="status-row"><span>WiFi</span><span class="status-waiting">Waiting</span></div>
-          </div>
-        </div>
-      </div>
+      <span class="eyebrow">Student Engineer</span>
+      <h1>Francis Olatunji</h1>
+      <p class="section-lead">Welcome to my portfolio. This website shows my school work, software projects, and ESP32 hardware project.</p>
     </section>
 
+    <section class="home-layout">
+      <article class="status-card">
+        <h2>Hardware Status</h2>
+        <div class="status-grid">
+          <div class="status-row"><span>ESP32</span><span class="status-ok">Online</span></div>
+          <div class="status-row"><span>LED System</span><span class="status-ok">Ready</span></div>
+          <div class="status-row"><span>Buzzer</span><span class="status-ok">Ready</span></div>
+          <div class="status-row"><span>WiFi</span><span class="status-waiting">Waiting</span></div>
+        </div>
+      </article>
+
+      <article class="status-card">
+        <h2>LED and Buzzer Controls</h2>
+        <p class="section-lead">Use these buttons for the ESP32 lights and buzzer.</p>
+        <div class="control-actions">
+          <button type="button" onclick="sendCommand('led1')">LED 1</button>
+          <button type="button" onclick="sendCommand('led2')">LED 2</button>
+          <button type="button" onclick="sendCommand('led3')">LED 3</button>
+          <button type="button" onclick="sendCommand('buzzer')">Buzzer</button>
+          <button type="button" onclick="sendCommand('off')">Off</button>
+        </div>
+        <p id="esp32-status">Status: not connected yet</p>
+      </article>
+    </section>
   </main>
+
+  <script>
+    const esp32IP = "http://192.168.1.45";
+
+    function sendCommand(command) {
+      const status = document.getElementById("esp32-status");
+      status.textContent = "Sending command...";
+
+      fetch(`${esp32IP}/${command}`)
+        .then(response => response.text())
+        .then(data => {
+          status.textContent = "Status: " + data;
+        })
+        .catch(error => {
+          status.textContent = "Status: could not connect to ESP32";
+          console.error(error);
+        });
+    }
+  </script>
 </body>
 </html>

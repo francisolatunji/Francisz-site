@@ -44,27 +44,31 @@ header, nav, main, footer, section { display: block; }
 }
 
 /* Hero */
-.page-hero { display: grid; gap: var(--gap); grid-template-columns: 1fr; background: var(--panel); padding: 20px; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
-@media (min-width:900px) { .page-hero { grid-template-columns: 1fr 360px; align-items: start; } }
+.page-hero {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: var(--radius);
+}
 
 .eyebrow { display:block; color: var(--accent); font-weight:700; font-size:0.95rem; margin-bottom:8px; }
 h1 { font-size: 2rem; margin: 12px 0 6px; }
 .section-lead { color: var(--muted); margin: 0 0 12px; }
-
-.hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-.button { background: var(--accent); color: #fff; padding:10px 14px; border-radius:8px; border:none; display:inline-block; text-decoration:none; font-weight:700; }
-.button-secondary { background: transparent; border: 1px solid #e6e9ef; padding:10px 14px; border-radius:8px; color: var(--muted); text-decoration:none; }
 
 /* Hero visual / avatar */
 .avatar-card img { width: 128px; height: 128px; object-fit: cover; border-radius: 12px; display:block; }
 .avatar-card { display:flex; align-items:center; gap:12px; }
 
 /* Status card */
-.status-card { background: var(--panel); padding: 14px; border-radius: 10px; box-shadow: 0 4px 10px rgba(15,23,42,0.04); }
+.home-layout { display: grid; gap: 16px; margin-top: 16px; }
+@media (min-width:800px) { .home-layout { grid-template-columns: repeat(2, 1fr); } }
+.status-card { background: var(--panel); padding: 16px; border-radius: 10px; border: 1px solid #e5e7eb; }
 .status-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #f1f3f6; }
 .status-row:last-child { border-bottom: none; }
 .status-ok { color: #16a34a; font-weight:700; }
 .status-waiting { color: #d97706; font-weight:700; }
+.control-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.control-actions button { background: var(--accent); border: 0; border-radius: 8px; color: #ffffff; cursor: pointer; font: inherit; font-weight: 700; padding: 10px 12px; }
+.control-actions button:hover { background: #1d4ed8; }
 
 /* Cards & grid */
 .content-grid { display:grid; gap: var(--gap); grid-template-columns: 1fr; margin-top: var(--gap); }
