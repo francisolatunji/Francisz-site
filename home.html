@@ -13,7 +13,6 @@
     <a href="ai.html">AI</a>
     <a href="electronics.html">Electronics</a>
     <a href="assignments.html">Assignments</a>
-    <a href="hardware.html">Hardware</a>
   </nav>
 
   <main>
@@ -34,23 +33,29 @@
         </div>
       </article>
 
-      <article class="status-card">
-        <h2>LED and Buzzer Controls</h2>
-        <p class="section-lead">Use these buttons for the ESP32 lights and buzzer.</p>
+      <section id="hardware-control" class="status-card">
+        <h2>ESP32 Hardware Control</h2>
+        <p>Control my real LEDs and buzzer from this portfolio website.</p>
         <div class="control-actions">
           <button type="button" onclick="sendCommand('led1')">LED 1</button>
           <button type="button" onclick="sendCommand('led2')">LED 2</button>
           <button type="button" onclick="sendCommand('led3')">LED 3</button>
           <button type="button" onclick="sendCommand('buzzer')">Buzzer</button>
-          <button type="button" onclick="sendCommand('off')">Off</button>
+          <button type="button" onclick="sendCommand('demo')">Demo Mode</button>
+          <button type="button" onclick="sendCommand('off')">Turn Off</button>
         </div>
-        <p id="esp32-status">Status: not connected yet</p>
-      </article>
+        <p id="esp32-status">Status: waiting...</p>
+        <p>
+          This system uses JavaScript to send a Wi-Fi request to an ESP32 microcontroller.
+          The ESP32 receives the request and controls physical outputs like LEDs and a buzzer.
+          This connects my portfolio website to real hardware.
+        </p>
+      </section>
     </section>
   </main>
 
   <script>
-    const esp32IP = "http://192.168.1.45";
+    const esp32IP = "http://192.168.2.60";
 
     function sendCommand(command) {
       const status = document.getElementById("esp32-status");
@@ -62,7 +67,7 @@
           status.textContent = "Status: " + data;
         })
         .catch(error => {
-          status.textContent = "Status: could not connect to ESP32";
+          status.textContent = "Status: Could not connect to ESP32";
           console.error(error);
         });
     }
